@@ -1,0 +1,4 @@
+#!/bin/bash
+clear
+#ssh to each machine, run script, write to file
+

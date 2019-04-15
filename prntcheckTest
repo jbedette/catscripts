@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+testimage="./testimg.png"
+
+printers="fab8201bw1"
+
+for print in $printers; do
+  echo "printing to $print"
+  dt=$(date '+%d/%m/%Y %H:%M:%S %p');
+  convert ./testimg.png -background Khaki -pointsize 40 label:"$print carton $dt" -gravity Center -append - | lpr -P $print -
+done
